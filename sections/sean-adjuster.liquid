@@ -1,0 +1,40 @@
+<style>
+    .more-margin {
+        height: 1px;
+        margin-top: {{ section.settings.more_margin_top }}vh;
+    }
+<style>
+
+<div class="more-margin"></div>
+
+  
+{% schema %}
+  {
+    "name": "上下間距調節器",
+    "settings": [
+      {
+        "type": "range",
+        "id": "more_margin_top",
+        "label": "移動調整間距",
+        "max": 30,
+        "min": -30,
+        "step": 1,
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "上下間距調節器",
+        "category": "Advanced"
+      }
+    ]
+  }
+{% endschema %}
+  
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+v=spf1 a mx ip4:118.163.217.0/24 ip4:103.118.24.0/24 ip4:103.118.25.0/24 include:_spf.google.com include:relay.mailchannels.net ~all
